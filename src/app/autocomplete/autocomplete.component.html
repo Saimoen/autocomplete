@@ -1,0 +1,16 @@
+<input
+  type="text"
+  [(ngModel)]="value"
+  (ngModelChange)="onModelChange()"
+  [placeholder]="placeholder"
+  (focus)="onShow()"
+  (blur)="onHide()">
+  
+<ul *ngIf="visible && filteredOptions.length">
+  <li
+    *ngFor="let option of filteredOptions"
+    (click)="onSelect(option)">
+    {{ option }}
+  </li>
+</ul>
+

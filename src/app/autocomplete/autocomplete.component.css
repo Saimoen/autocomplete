@@ -1,0 +1,13 @@
+:host {
+    position: relative;
+}
+
+:host ul {
+    background-color: white;
+    border: 1px solid black;
+    position: absolute;
+    padding: 5px;
+    margin: 0;
+    z-index: 1;
+    width: 100%;
+}

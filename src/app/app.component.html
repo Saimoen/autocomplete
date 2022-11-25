@@ -1,0 +1,19 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <input type="text" placeholder="Nom" formControlName="name"><br>
+    <input type="email" placeholder="Email" formControlName="email"><br>
+    <input type="tel" placeholder="Téléphone" formControlName="phone"><br>
+
+    <app-autocomplete
+        [options]="cities"
+        placeholder="Commune"
+        formControlName="city">
+    </app-autocomplete><br>
+
+    <app-autocomplete
+        [options]="nationalities"
+        placeholder="Nationalité"
+        formControlName="nationality">
+    </app-autocomplete><br>
+
+    <button type="submit">Envoyer</button>
+</form>
